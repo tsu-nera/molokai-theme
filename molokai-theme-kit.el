@@ -82,7 +82,7 @@
                "] "
 
 	       ;; show org-clock-in
-	       org-mode-line-string
+	       '(:eval org-mode-line-string)
 
                ;; add the time, with the date and the emacs uptime in the tooltip
                ;; '(:eval (propertize (format-time-string "%H:%M")
@@ -96,3 +96,10 @@
                ))
 
 (provide 'molokai-theme-kit)
+
+
+
+
+
+
+
