@@ -49,11 +49,14 @@
                ;; the buffer name; the file name as a tool tip
                " " '(:eval (propertize "%b " 'face 'font-lock-keyword-face 'help-echo (buffer-file-name)))
 
+	       ;; encoding
+	       "("mode-line-mule-info")"
+
                ;; line and column
                "(" (propertize "%l" 'face 'font-lock-type-face) "," (propertize "%c" 'face 'font-lock-type-face) ") "
 
                ;; relative position, size of file
-               "[" (propertize "%p" 'face 'font-lock-constant-face) "/" (propertize "%I" 'face 'font-lock-constant-face) "] "
+               ;; "[" (propertize "%p" 'face 'font-lock-constant-face) "/" (propertize "%I" 'face 'font-lock-constant-face) "] "
 
                ;; the current major mode for the buffer.
                "[" '(:eval (propertize "%m" 'face 'font-lock-string-face 'help-echo buffer-file-coding-system)) "] "
@@ -78,11 +81,14 @@
                                                   'help-echo "Buffer is read-only"))))
                "] "
 
+	       ;; show org-clock-in
+	       org-mode-line-string
+
                ;; add the time, with the date and the emacs uptime in the tooltip
-               '(:eval (propertize (format-time-string "%H:%M")
-                                   'help-echo
-                                   (concat (format-time-string "%c; ")
-                                           (emacs-uptime "Uptime:%hh"))))
+               ;; '(:eval (propertize (format-time-string "%H:%M")
+               ;;                     'help-echo
+               ;;                     (concat (format-time-string "%c; ")
+               ;;                             (emacs-uptime "Uptime:%hh"))))
                " --"
                ;; i don't want to see minor-modes; but if you want, uncomment this:
                ;; minor-mode-alist  ;; list of minor modes
