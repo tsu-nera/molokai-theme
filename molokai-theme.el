@@ -99,11 +99,13 @@
 
    ;; mode line
    `(mode-line ((t (:foreground ,molokai-fg
-                                :background ,molokai-base03
+;;                                :background ,molokai-base03
+				:background ,molokai-grey+10
                                 :box nil))))
    `(mode-line-buffer-id ((t (:weight bold))))
    `(mode-line-inactive ((t (:foreground ,molokai-fg
-                                         :background ,molokai-base02
+;;                                         :background ,molokai-base02
+					 :background ,molokai-grey+10
                                          :box nil))))
 
    ;; search

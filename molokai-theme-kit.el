@@ -86,7 +86,7 @@
 
                ;; add the time, with the date and the emacs uptime in the tooltip
                ;; '(:eval (propertize (format-time-string "%H:%M")
-               ;;                     'help-echo
+               ;;                     'help-techo
                ;;                     (concat (format-time-string "%c; ")
                ;;                             (emacs-uptime "Uptime:%hh"))))
                " --"
@@ -96,10 +96,3 @@
                ))
 
 (provide 'molokai-theme-kit)
-
-
-
-
-
-
-
