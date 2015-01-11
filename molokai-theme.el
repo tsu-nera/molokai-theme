@@ -120,8 +120,9 @@
    `(hl-line-face ((,class (:background ,molokai-grey+5)) (t :weight bold)))
    `(hl-line ((,class (:background ,molokai-grey+5)) (t :weight bold)))
 
-   ;; TODO helm
-
+   ;; helm
+   `(helm-source-header ((t (:foreground ,molokai-fg :background ,molokai-wine :weight bold))))
+   `(helm-selection ((t (:foreground ,molokai-bg :background ,molokai-purple :weight bold))))   
    ))
 
 (defcustom molokai-theme-kit nil
