@@ -72,7 +72,8 @@
    'molokai
 
    ;; base
-   `(default ((t (:background ,molokai-bg :foreground ,molokai-fg))))
+   (unless (eq window-system nil)
+   `(default ((t (:background ,molokai-bg :foreground ,molokai-fg)))))
    `(cursor ((t (:background ,molokai-fg :foreground ,molokai-bg))))
    `(fringe ((t (:foreground ,molokai-base02 :background ,molokai-bg))))
    `(highlight ((t (:background ,molokai-grey))))
@@ -119,12 +120,8 @@
    `(hl-line-face ((,class (:background ,molokai-grey+5)) (t :weight bold)))
    `(hl-line ((,class (:background ,molokai-grey+5)) (t :weight bold)))
 
-   ;; TODO
-   ;; ido-mode
-   ;; flycheck
-   ;; show-paren
-   ;; rainbow-delimiters
-   ;; highlight-symbols
+   ;; TODO helm
+
    ))
 
 (defcustom molokai-theme-kit nil
